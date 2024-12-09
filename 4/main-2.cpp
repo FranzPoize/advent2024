@@ -45,54 +45,6 @@ int main (int argc, char *argv[]) {
             return count;
         };
 
-    auto checkXmasDiagPlus = [](std::string & s, int i, int j)
-        {
-            if (i >= R - 3 || j >= C - 3)
-                return 0;
-
-            int count = 0;
-            int p = i + C * j;
-            if (s.at(p) == 'X'
-                && s.at(p + 1 + C) == 'M'
-                && s.at(p + 2 + (2 * C)) == 'A'
-                && s.at(p + 3 + (3 * C)) == 'S') count++;
-            if (s.at(p) == 'S'
-                && s.at(p + 1 + C) == 'A'
-                && s.at(p + 2 + (2 * C)) == 'M'
-                && s.at(p + 3 + (3 * C)) == 'X') count++;
-            return count;
-        };
-
-    auto checkXmasHoriz = [](std::string & s, int i, int j)
-        {
-            if (i >= R - 3)
-                return 0;
-
-            int count = 0;
-            int p = i + C * j;
-            if (s.substr(p, 4) == "XMAS") count++;
-            if (s.substr(p, 4) == "SAMX") count++;
-            return count;
-        };
-
-    auto checkXmasVert = [](std::string & s, int i, int j)
-        {
-            if (j >= C - 3)
-                return 0;
-
-            int count = 0;
-            int p = i + C * j;
-            if (s.at(p) == 'X'
-                && s.at(p + C) == 'M'
-                && s.at(p + 2 * C) == 'A'
-                && s.at(p + 3 * C) == 'S') count++;
-            if (s.at(p) == 'S'
-                && s.at(p + C) == 'A'
-                && s.at(p + 2 * C) == 'M'
-                && s.at(p + 3 * C) == 'X') count++;
-            return count;
-        };
-
     int count = 0;
     for (int j = 0; j < R; j++)
     {
