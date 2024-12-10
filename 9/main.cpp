@@ -53,11 +53,6 @@ int main (int argc, char *argv[]) {
         resultString.push_back(fileIndex);
     }
 
-    cout << diskmap << endl;
-    for (int i = 0; i < resultString.size(); i++)
-    {
-        result += i * (resultString.at(i));
-    }
     cout << result;
     return 0;
 }

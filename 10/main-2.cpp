@@ -81,6 +81,14 @@ int main (int argc, char *argv[]) {
     };
 
     vector<int> resultString = disk;
+    // for (auto e : resultString)
+    // {
+    //     cout << (char)((e != -1) ? e + '0' : '.');
+    // }
+    // for (auto e : resultString)
+    // {
+    //     cout << e << " ";
+    // }
     int * b = &(*resultString.begin());
     int * e = &(*resultString.end()) - 1;
     while (e >= b)
@@ -95,6 +103,15 @@ int main (int argc, char *argv[]) {
         e = end;
     }
 
+    // for (auto e : resultString)
+    // {
+    //     cout << (char)((e != -1) ? (e % 10) + '0' : ' ');
+    // }
+    for (auto e : resultString)
+    {
+        cout << e << " ";
+    }
+    cout << endl;
     for (int i = 0; i < resultString.size(); i++)
     {
         if (resultString.at(i) != -1)
